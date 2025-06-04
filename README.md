@@ -1,0 +1,8 @@
+# Test nv-ingest with build endpoints'
+
+1. Update the env var keys in `ingest.py` 
+
+2. `docker build . -t nvingest-test`
+
+3. `docker run nvingest-test` 
+
