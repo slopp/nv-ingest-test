@@ -8,13 +8,13 @@ from nv_ingest_api.util.message_brokers.simple_message_broker import SimpleClien
 from nv_ingest_client.util.process_json_files import ingest_json_results_to_blob
 
 # Start the pipeline subprocess for library mode                       
-#os.environ["NVIDIA_API_KEY"] = ""
-#os.environ["NVIDIA_BUILD_API_KEY"] = ""
+os.environ["NVIDIA_API_KEY"] = ""
+os.environ["NVIDIA_BUILD_API_KEY"] = ""
 config = PipelineCreationSchema()
 
 
 # you can configure the subprocesses to log stderr to stdout for debugging purposes
-run_pipeline(config, disable_dynamic_scaling=True, run_in_subprocess=True, stderr=sys.stderr, stdout=sys.stdout)
+run_pipeline(config, disable_dynamic_scaling=True, run_in_subprocess=False, stderr=sys.stderr, stdout=sys.stdout)
 #run_pipeline(config, block=False, disable_dynamic_scaling=True, run_in_subprocess=True)
 
 client = NvIngestClient(

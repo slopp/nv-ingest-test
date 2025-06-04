@@ -4,5 +4,5 @@
 
 2. `docker build . -t nvingest-test`
 
-3. `docker run nvingest-test` 
+3. `docker run --cpus=8 --shm-size=10.24gb nvingest-test` 
 
